@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>bootstrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A baskic Hello world example for bootstrap">
+	<meta name ="author" content="Awesome Sauce">
+	<title>bootstrap</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+    ul li a{
+        color: red;
+    }
+    .container1{
+        background-color: red;
+    }
+    /*user profile img*/
+    .userimage img{
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+    }
+    #line{
+        height:5px;
+        width:100%;
+        color: red;
+        background-color: #595959;
+    }
+    .badge img{
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+    }
+    .badgenot img{
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        opacity: .5;
+    }
+    </style>
+</head>
+<body>
+    </br>
+    <div class="container">
+        <ul class="nav nav-pills nav-justified">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="jumbotron">
+            <center>
+            <h2>Profile</h2>
+            </center>
+        </div>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-12">
+                  <!-- User profile img -->
+                  <div class="userimage">
+                    <img src="http://a3.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NDg0MDU1MTUyNzIzNDcx.jpg">
+                  </div>
+                <!-- User prifile name-->
+                  <h1>Donald Trump</h1>
+                <!-- A line to go across page -->
+                  <div id="line">
+                  </div>
+                  <p> Badges Aquired
+                </div>
+            </div>
+            <!-- badges aquired -->
+            <table>
+                <tr>
+                    <td>
+                        <div class="badge">
+                          <div class="col-sm-12">
+                              <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2013/11/21/07/29/icon-214444_960_720.jpg"/>
+                          </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="badge">
+                          <div class="col-sm-12">
+                              <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2013/11/21/07/29/icon-214444_960_720.jpg"/>
+                          </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+            <!-- Badges not aquired -->
+            <p>Badges not yet aquired</p>
+            <div id="line">
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        <div class="badgenot">
+                          <div class="col-sm-12">
+                              <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2013/11/21/07/29/icon-214444_960_720.jpg"/>
+                          </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="badgenot">
+                          <div class="col-sm-12">
+                              <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2013/11/21/07/29/icon-214444_960_720.jpg"/>
+                          </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <center>
+                    <h3>Contact</h3>
+                    <span class="glyphicon glyphicon-earphone">512-555-555</span>
+                    <br>
+                    <span class="glyphicon glyphicon-map-marker">Austin Texas</span>
+                    <br>
+                    <span class="glyphicon glyphicon-envelope">example@gmail.com</span>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
