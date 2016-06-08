@@ -1,132 +1,770 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>bootstrap</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="A baskic Hello world example for bootstrap">
-	<meta name ="author" content="Awesome Sauce">
-	<title>bootstrap</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet"/>
-    <style>
-    ul li a{
-        color: red;
-    }
-    .container1{
-        background-color: red;
-    }
-    /*user profile img*/
-    .userimage img{
-        border-radius: 50%;
-        height: 200px;
-        width: 200px;
-    }
-    #line{
-        height:5px;
-        width:100%;
-        color: red;
-        background-color: #595959;
-    }
-    .badge img{
-        height: 100px;
-        width: 100px;
-        border-radius: 100%;
-    }
-    .badgenot img{
-        height: 100px;
-        width: 100px;
-        border-radius: 100%;
-        opacity: .5;
-    }
-    </style>
-</head>
-<body>
-    </br>
-    <div class="container">
-        <ul class="nav nav-pills nav-justified">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="profile.html">Profile</a></li>
-        </ul>
-        <div class="jumbotron">
-            <center>
-            <h2>Profile</h2>
-            </center>
-        </div>
-        <div class="jumbotron">
-            <div class="row">
-                <div class="col-md-12">
-                  <!-- User profile img -->
-                  <div class="userimage">
-                    <img src="http://a3.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NDg0MDU1MTUyNzIzNDcx.jpg">
-                  </div>
-                <!-- User prifile name-->
-                  <h1>Donald Trump</h1>
-                <!-- A line to go across page -->
-                  <div id="line">
-                  </div>
-                  <p> Badges Aquired
-                </div>
-            </div>
-            <!-- badges aquired -->
-            <table>
-                <tr>
-                    <td>
-                        <div class="badge">
-                          <div class="col-sm-12">
-                              <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2013/11/21/07/29/icon-214444_960_720.jpg"/>
-                          </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="badge">
-                          <div class="col-sm-12">
-                              <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2013/11/21/07/29/icon-214444_960_720.jpg"/>
-                          </div>
-                        </div>
-                    </td>
-                </tr>
+<html  class="full" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Profile Page Veterans I.E.D</title>
 
-            </table>
-            <!-- Badges not aquired -->
-            <p>Badges not yet aquired</p>
-            <div id="line">
-            </div>
-            <table>
-                <tr>
-                    <td>
-                        <div class="badgenot">
-                          <div class="col-sm-12">
-                              <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2013/11/21/07/29/icon-214444_960_720.jpg"/>
-                          </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="badgenot">
-                          <div class="col-sm-12">
-                              <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2013/11/21/07/29/icon-214444_960_720.jpg"/>
-                          </div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="js/angular.js"></script>
+
+        <!-- custom css -->
+    <link href="css/profile.css"rel="stylesheet">
+    <!-- jQuery Plug in-->
+    <script src="jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- script for pop up modal -->
+    <script type="text/javascript" src="js/profile.js"></script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="indexLoggedIn.html">Veterans Impacting Every Day</a>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="jumbotron">
-                    <center>
-                    <h3>Contact</h3>
-                    <span class="glyphicon glyphicon-earphone">512-555-555</span>
-                    <br>
-                    <span class="glyphicon glyphicon-map-marker">Austin Texas</span>
-                    <br>
-                    <span class="glyphicon glyphicon-envelope">example@gmail.com</span>
-                    </center>
-                </div>
-            </div>
-        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="indexLoggedIn.html">Home</a></li>
+            <li class="dropdown actiive">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Testimonials <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="testimonials.html">All Testimonials</a></li>
+                <li><a href="savedTestimonials.html">My Testimonials</a></li>
+              </ul>
+            </li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="inspiredBy.html">Inspired By</a></li>
+          </ul>
+        </div><!-- .navbar-collapse -->
+      </div>
+    </div><!-- Navbar -->
+
+
+
+    <div class="blankSpace">
+    </div>
+    <div class="blankSpace">
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
+    <div class="container">
+      <div class="jumbotron profilejumbotron">
+        <!-- User Image -->
+          <div class="row col-lg-4 col-md-12">
+            <img class="profileImage image-responsive" src="soldier.jpg">
+            <!-- User name -->
+            <h2> Erika Parker/Marines </h2>
+          </div>
+          <div class="row col-lg-4 col-md-6 col-sm-6 col-xs-6 pull-left">
+            <h3>Medals earned</h3>
+            <div class="score">
+              <p>1</p>
+            </div>
+          </div>
+          <div class="row col-lg-4 col-md-6 col-sm-6 col-xs-6 pull-right">
+            <h3>Stars earned</h3>
+            <div class="score">
+              <p>2</p>
+            </div>
+          </div>
+
+      <!-- Badges Completed >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+        <div class="row col-lg-12">
+          <h1>Medals Completed</h1>
+          <hr>
+        </div>
+          <div class="fishingCompleted">
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <!-- First badge Image -->
+                <img id="badge" src="fishing.jpg" alt="Generic placeholder image">
+                <!-- First badge Header -->
+                <h2>Fishing Medal</h2>
+                <!-- First badge Description -->
+                  <p>The Fishing Journey</p>
+              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#fishingCompleted"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+              </div><!-- First Badge -->
+            </div>
+          </div>
+          <div class="boxingCompleted">
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <!-- First badge Image -->
+                <img id="badge" src="boxing.png" alt="Generic placeholder image">
+                <!-- First badge Header -->
+                <h2>Boxing Medal</h2>
+                <!-- First badge Description -->
+                <p>Boxing Medal</p>
+              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#boxingCompleted"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+              </div><!-- First Badge -->
+            </div>
+          </div>
+          <div class="floatTherapyCompleted">
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <!-- First badge Image -->
+                <img id="badge" src="floatTherapy.jpg" alt="Generic placeholder image">
+                <!-- First badge Header -->
+                <h2>Float Therapy Medal</h2>
+                <!-- First badge Description -->
+                <p>The Float Therapy Medal</p>
+              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#floatTherapyCompleted"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+              </div><!-- First Badge -->
+            </div>
+          </div>
+          <div class="warDogCompleted">
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <!-- First badge Image -->
+                <img id="badge" src="dog.jpg" alt="Generic placeholder image">
+                <!-- First badge Header -->
+                <h2>Veterans Service Dog Medal</h2>
+                <!-- First badge Description -->
+                <p>What This Veteran Was Able to Accomplish</p>
+              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#warDogCompleted"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+              </div><!-- First Badge -->
+            </div>
+          </div>
+      <!-- Badges in progress >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+          <div class="row col-lg-12">
+            <h1>Medals in Progress</h1>
+          </div>
+            <div class="fishingProgress">
+              <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <!-- First badge Image -->
+                  <img id="badge" src="fishing.jpg" alt="Generic placeholder image">
+                  <!-- First badge Header -->
+                  <h2>Fishing Medal</h2>
+                  <!-- First badge Description -->
+                  <p>The Fishing Journey</p>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#fishingAccepted"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+                </div><!-- First Badge -->
+              </div>
+            </div>
+
+            <div class="boxingProgress">
+              <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <!-- First badge Image -->
+                  <img id="badge" src="boxing.png" alt="Generic placeholder image">
+                  <!-- First badge Header -->
+                  <h2>The Boxer Medal</h2>
+                  <!-- First badge Description -->
+                  <p>The Boxer</p>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#boxingAccepted"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+                </div><!-- First Badge -->
+              </div>
+            </div>
+            <div class="floatTherapyProgress">
+              <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <!-- First badge Image -->
+                  <img id="badge" src="floatTherapy.jpg" alt="Generic placeholder image">
+                  <!-- First badge Header -->
+                  <h2>The Float Therapy Medal</h2>
+                  <!-- First badge Description -->
+                  <p>What This Veteran Was Able to Accomplish</p>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#floatTherapyAccepted"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+                </div><!-- First Badge -->
+              </div>
+            </div>
+            <div class="warDogProgress">
+              <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <!-- First badge Image -->
+                  <img id="badge" src="dog.jpg" alt="Generic placeholder image">
+                  <!-- First badge Header -->
+                  <h2>Veterans Service Dog Medal</h2>
+                  <!-- First badge Description -->
+                  <p>What This Veteran Was Able to Accomplish</p>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#warDogAccepted"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+                </div><!-- First Badge -->
+              </div>
+            </div>
+      <!-- All Badges >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+            <div class="row col-lg-12">
+              <hr>
+              <h1>All Medals</h1>
+            </div>
+              <div class="row">
+                <div class="fishingBadge">
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                    <!-- First badge Image -->
+                    <img id="badge" src="fishing.jpg" alt="Generic placeholder image" id="badge">
+                    <!-- First badge Header -->
+                    <h2>Fishing Medal</h2>
+                    <!-- First badge Description -->
+                  <p>The Fishing Journey</p>
+                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#fishing"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+                  </div><!-- First Badge -->
+                </div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+      <div class="boxingAll">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <!-- Second badge Image -->
+          <img id="badge" src="boxing.png" alt="Generic placeholder image">
+          <!-- Second badge Header -->
+          <h2>The Boxer Medal</h2>
+          <!-- Second badge Description -->
+          <p>This incredible Boxer helped his ptsd with boxing</p>
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#boxing"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+        </div><!-- Second badge -->
+      </div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+      <div class="floatTherapyAll">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <!-- Third badge image -->
+          <img id="badge" src="floatTherapy.jpg" alt="Generic placeholder image">
+          <!-- Third badge Header -->
+          <h2>Float Therapy Medal</h2>
+          <!-- Third badge Description -->
+          <p>See how Float Therapy helped</p>
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#floatTherapy"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+        </div><!-- Third Badge -->
+      </div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+      <div class="warDogAll">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <!-- Third badge image -->
+          <img id="badge" src="dog.jpg" alt="Generic placeholder image">
+          <!-- Third badge Header -->
+          <h2>Veterans Service Dog Medal</h2>
+          <!-- Third badge Description -->
+          <p>See how Veterans Service Dog helped</p>
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#warDog"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+        </div><!-- Third Badge -->
+      </div>
+      </div><!-- /.row -->
+
+              <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <!-- fifth badge Image -->
+                  <img id="badge" src="teamwork.jpg" alt="Generic placeholder image">
+                  <!-- fifth badge Header -->
+                  <h2>Team Work Medal</h2>
+                  <!-- fifth badge Description -->
+                  <p>Complete a Medal with another Veteran</p>
+                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#teamWork"><i class="fa fa-plus-square-o fa-lg">View details</i></button>
+                </div><!-- fifth badge -->
+              </div><!-- /.row -->
+      </div>
+    </div>
+    </div>
+
+    <!-- Badge pop ups Badge pop ups Badge pop ups Badge pop ups Badge pop ups Badge pop ups Badge pop ups Badge pop ups Badge pop ups Badge pop ups Badge pop ups Badge pop ups  -->
+     <div class="blankSpace">
+     </div>
+
+    <!-- First Badge pop up -->
+     <div class="container heading">
+
+
+        <!-- Popup First Badge -->
+        <div class="modal fade" id="fishing">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h3 class="modal-title pull-left">Fishing-Medal-Created by Jordan Cooper/Marines</h3>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="fishing.jpg" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                  <!-- Testimonial -->
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metusPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+                  <div class="form-group">
+                    <div class="fishingAccepted">
+                      <div class="col-lg-2">
+                        <input type="sub" class="btn btn-success" value="Accept Challenge">
+                      </div>
+                  </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- First Badge popup -->
+
+    <!-- Second Badge pop up -->
+     <div class="container heading">
+
+
+        <!-- Popup Second Badge -->
+        <div class="modal fade" id="boxing">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h4 class="modal-title">Boxing Medal</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="boxing.png" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                  <!-- Testimonial -->
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metusPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+                  <div class="form-group">
+                    <div class="boxingAccepted">
+                      <div class="col-lg-2">
+                        <input type="sub" class="btn btn-success" value="Accept Challenge">
+                      </div>
+                  </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- Second Badge popup -->
+
+
+
+    <!-- Third Badge pop up -->
+     <div class="container heading">
+
+
+        <!-- Popup Third Badge -->
+        <div class="modal fade" id="floatTherapy">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h4 class="modal-title">The Float Therapy Medal</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="floatTherapy.jpg" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                  <!-- Testimonial -->
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metusPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+                  <div class="form-group">
+                    <div class="floatTherapyAccepted">
+                      <div class="col-lg-2">
+                        <input type="sub" class="btn btn-success" value="Accept Challenge">
+                      </div>
+                  </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- third Badge popup -->
+
+      <!-- fourth Badge popup -->
+      <div class="container heading">
+        <div class="modal fade" id="warDog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h4 class="modal-title">Veterans Service Dog Medal</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="dog.jpg" alt="Generic placeholder image" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                  <!-- Testimonial -->
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metusPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+                  <div class="form-group">
+                    <div class="warDogAccepted">
+                      <div class="col-lg-2">
+                        <input type="sub" class="btn btn-success" value="Accept Challenge">
+                      </div>
+                  </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- fourth Badge popup -->
+
+      <!-- fifth Badge popup -->
+      <div class="container heading">
+        <div class="modal fade" id="teamWork">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h4 class="modal-title">Team Work Medal</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="teamwork.jpg" alt="Generic placeholder image" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                  <!-- Testimonial -->
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metusPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+                  <div class="form-group">
+                    <div class="col-lg-2">
+                      <input type="submit" class="btn btn-success" value="Accept Challenge">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- fifth Badge popup -->
+<!-- accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted -->
+
+      <!-- accepted pop up            -->
+        <!-- Popup First Badge -->
+        <div class="modal fade" id="fishingAccepted">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h3 class="modal-title pull-left">Fishing-Created by Jordan Cooper/Marines</h3>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="fishing.jpg" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                    <!-- steps to complete -->
+                    <h1>To complete the Fishing Medals please follow these steps </h1>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>1. Call a Veteran and ask if they would like to go Fishing</h3></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>2. Find a place to fish </h3></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>3. Get Bait and Fishing Rods </h3></label>
+                    </div>
+                  <div class="form-group">
+                    <div class="col-lg-2">
+                      <div class="fishingShowCompleted">
+                        <input type="sub" class="btn btn-success" value="Complete challenge" onclick="play()">
+                        <audio id="audio" src="completed.wav" ></audio>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+      <!-- boxing -->
+      <!-- accepted pop up            -->
+        <!-- Popup First Badge -->
+        <div class="modal fade" id="boxingAccepted">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h4 class="modal-title">Boxing</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="boxing.png" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                    <!-- steps to complete -->
+                    <h1>To complete the Boxing Medal Please follow these steps </h1>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>1. Go to a local gym</h3></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>2. Ask if they Have any discounts for Veterans </h3></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>2. Get Work Out Routines </h3></label>
+                    </div>
+                  <div class="form-group">
+                    <div class="col-lg-2">
+                      <div class="boxingShowCompleted">
+                        <input type="sub" class="btn btn-success" value="Complete challenge" onclick="play()">
+                        <audio id="audio" src="completed.wav" ></audio>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="floatTherapyAccepted">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h4 class="modal-title">Float Therapy</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="floatTherapy.jpg" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                    <!-- steps to complete -->
+                    <h1>To Complete the Float Therapy Medal please follow these steps </h1>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>1. Google Float Therapy near me</h3></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>2. Contact Float Therapy center</h3></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>2. Make A Appointment</h3></label>
+                    </div>
+                  <div class="form-group">
+                    <div class="col-lg-2">
+                      <div class="floatTherapyShowCompleted">
+                        <input type="sub" class="btn btn-success" value="Complete challenge" onclick="play()">
+                        <audio id="audio" src="completed.wav" ></audio>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="warDogAccepted">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h4 class="modal-title">Veterans Service Dog</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="dog.jpg" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                    <!-- steps to complete -->
+                    <h1>To complete the Veterans Service Dog Medal please follow these steps </h1>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>1. Go to Paws for Veterans webpage</h3></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>2. Watch the info video </h3></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>3. Read The What We do page </h3></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>4. Apply for a Dog </h3></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value=""><h3>4. Go thru Training </h3></label>
+                    </div>
+                  <div class="form-group">
+                    <div class="col-lg-2">
+                      <div class="warDogShowCompleted">
+                        <input type="sub" class="btn btn-success" value="Complete challenge" onclick="play()">
+                        <audio id="audio" src="completed.wav" ></audio>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+<!--  END END  accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted accepted -->
+
+
+      <!-- completed pop up            -->
+        <!-- Popup First Badge -->
+        <div class="modal fade" id="fishingCompleted">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h3 class="modal-title pull-left">Fishing-Medal-Created by Jordan Cooper/Marines</h3>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="fishing.jpg" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                    <!-- steps to complete -->
+                    <h1> Congrats on completing the Fishing Medal</h1>
+                    <h1>It's what you do know that matters when you are ready feel free to post a testimonial on how this Medal Inspired you....</h1>
+                  <div class="form-group">
+                    <div class="col-lg-2">
+                      <div class="completed">
+                        <a href="testimonials.html"><input type="sub" class="btn btn-success" value="Share your sucess"></a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+      <!-- completed pop up            -->
+        <!-- Popup second Badge -->
+        <div class="modal fade" id="boxingCompleted">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h4 class="modal-title">Boxing</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="boxing.png" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                    <!-- steps to complete -->
+                    <h1> Congrats on completing the Boxing Medal</h1>
+                    <h1>It's what you do know that matters when you are ready feel free to post a testimonial on how this Medal Inspired you....</h1>
+                  <div class="form-group">
+                    <div class="col-lg-2">
+                      <div class="completed">
+                        <a href="testimonials.html"><input type="sub" class="btn btn-success" value="Share your sucess"></a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="floatTherapyCompleted">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h4 class="modal-title">Float Therapy</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="floatTherapy.jpg" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                    <!-- steps to complete -->
+                    <h1> Congrats on completing the Float Therapy Medal</h1>
+                    <h1>It's what you do know that matters when you are ready feel free to post a testimonial on how this Medal Inspired you....</h1>
+                  <div class="form-group">
+                    <div class="col-lg-2">
+                      <div class="completed">
+                        <a href="testimonials.html"><input type="sub" class="btn btn-success" value="Share your sucess"></a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="warDogCompleted">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- popup  Header -->
+              <div class="modal-header">
+                <!-- EXIT Button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <!-- badge Title -->
+                <h4 class="modal-title">War Dog</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <!-- Badge Image -->
+                  <img src="dog.jpg" class="img-responsive badgeLargeImage" alt="Cinque Terre">
+                    <!-- steps to complete -->
+                    <h1> Congrats on completing the War Dog Medal</h1>
+                    <h1>It's what you do know that matters when you are ready feel free to post a testimonial on how this Medal Inspired you....</h1>
+                  <div class="form-group">
+                    <div class="col-lg-2">
+                      <div class="completed">
+                        <a href="testimonials.html"><input type="sub" class="btn btn-success" value="Share your sucess"></a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <div class="navbar navbar-default navbar-fixed navbarBottom" role="navigation">
+      <div class="container">
+        <div class="navbar-text pull-left">
+            <p> 2016 Veterans I.E.D.</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

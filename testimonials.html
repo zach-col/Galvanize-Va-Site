@@ -1,67 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>bootstrap</title>
+<html class="full" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name ="author" content="Awesome Sauce">
-    <title>bootstrap</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Testimonials Veterans I.E.D</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+            <!-- custom css -->
+    <link href="css/testimonials.css"rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Angular plug in-->
+    <script src="js/angular.min.js"></script>
+    <!-- Angular app -->
+    <script src="js/testimonial.js"></script>
+    <!-- for some reason the background url wasnt working I put it here and it worked -->
     <style>
-    ul li a{
-        color: red;
-    }
-    .jumbotron img{
-        border-radius: 50%;
-    }
+          /* Space out content a bit */
+      body {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background: none;
+      }
+
+      .full {
+        background: url("sky.jpg") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
     </style>
-</head>
-<body>
-    </br>
-    <div class="container">
-        <ul class="nav nav-pills nav-justified">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
+  </head>
+  <body ng-app="myModule" ng-controller="myController">
+    
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="indexLoggedIn.html">Veterans Impacting Every Day</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="indexLoggedIn.html">Home</a></li>
+            <li class="dropdown actiive">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Testimonials <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="testimonials.html">All Testimonials</a></li>
+                <li><a href="savedTestimonials.html">Saved Testimonials</a></li>
+              </ul>
+            </li>
             <li><a href="profile.html">Profile</a></li>
-        </ul>
-        <div class="jumbotron">
-            <center>
-            <h2>Testimonials</h2>
-            </center>
+            <li><a href="inspiredBy.html">Inspired By</a></li>
+          </ul>
+        </div><!-- .navbar-collapse -->
+      </div>
+    </div>
+    <br>
+    <br>
+     <div class="container heading">
+        <div class="jumbotron" id="backgroundOpacity">
+        <!-- Testimonial Button -->
+        <h1 class="modalTitle">Post a Testimonial</h1><button type="button" class="btn-primary" data-toggle="modal" data-target="#form"> -|- </button>
+        <!-- Popup Testimonial -->
+        <div class="modal fade" id="form">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Form header -->
+              <div class="modal-header">
+                <!-- Exit button -->
+                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>&times;</span></button>
+                <h4 class="modalTitle">Post a Testimonial</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <fieldset class="form-group">
+                    <div class="container">
+                      <h1 id="congrats">Congratulations</h1>
+                      <!--<h3 id="congratsInfo">on Completing your Badge</h3>-->
+                    </div>
+                    <label class="col-md-4 col-md-offset-1" for="exampleSelect1">Badge Being Earned</label>
+                    <select class="col-md-5" class="form-control input-md" id="exampleSelect1">
+                      <option>War Dog Medal</option>
+                      <option>The Boxer Medal</option>
+                      <option>Float Therapy Medal</option>
+                      <option>Fishing Medal</option>
+                      <option>Team Work Medal</option>
+                    </select>
+                  </fieldset>
+                  <!-- Testimonial Title -->
+                  <div class="form-group">
+                    <label class="col-md-4 col-md-offset-1">Title</label>
+                    <div class="col-md-5">
+                      <input type="text" class="form-control input-sm">
+                    </div>
+                  </div>
+                  <!-- Testimoinal -->
+                  <form role="form">
+                    <div class="form-group">
+                      <label for="comment" class="col-md-offset-1">Testimonial:</label>
+                      <textarea class="form-control" rows="5" id="Testimonial"></textarea>
+                    </div>
+                  </form>
+                  <input type="submit" class="btn btn-success" value="submit">
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
         </div>
-        <div class="jumbotron">
+      </div>
+      </div>
+    <!-- TESTIMONIALS -->
+    <div class="container">
+      <div class="jumbotron" id="backgroundOpacity">
         <div class="row">
-            <!-- Image of the user's profile -->
-            <div class="col-md-6">
-                <center>
-                  <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2015/01/28/19/34/solitary-figure-615175_960_720.jpg" alt="Chania" width="200" height="200">
-                </center>
-            </div>
-            <!-- first few words of testimonial -->
-            <div class="col-md-6">
-                <center>
-                     <p>Here is the text of the testimonial
-                     </p>
-                </center>
-            </div>
+          <div class=" col-lg-4 col-md-6 col-sm-6 col-xs-6">
+            <!-- USER PROFILE picture -->
+            <img src="default.png" id="profileImg">
+            <!-- user name -->
+            <p class="name">{{ test.profileName }}</p>
+          </div>
+
+          <div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <!-- USER PROFILE picture -->
+            <img src="fishing.jpg" id="badge">
+            <!-- badge being earned-->
+            <p class="badgeName">{{ test.badgeName }}</p>
+          </div>
+
         </div>
+        <div class="scroller" id="backgroundOpacity">
+          <!-- USER Testimonial TITAL -->
+          <h1 class="title">{{ test.title }}</h1>
+          <!-- USER TESTIMONIAL -->
+                    <p>{{ test.testimonial }}</p>
+          <button type="button" class="btn btn-success">edit</button>  
         </div>
+          <div class="btn-group btn-group-justified">
+            <a href="#" class="btn btn-primary star">Save
+            <a href="#" class="btn btn-danger flag">Flag</a>
+          </div>
+      </div>
+
+    </div>
+    <div class="container">
+      <div class="jumbotron" id="backgroundOpacity">
         <div class="row">
-            <div class="col-md-12">
-                <div class="jumbotron">
-                    <center>
-                    <h3>Contact</h3>
-                    <span class="glyphicon glyphicon-earphone">512-555-555</span>
-                    <br>
-                    <span class="glyphicon glyphicon-map-marker">Austin Texas</span>
-                    <br>
-                    <span class="glyphicon glyphicon-envelope">example@gmail.com</span>
-                    </center>
-                </div>
-            </div>
+          <div class=" col-lg-4 col-md-6 col-sm-6 col-xs-6">
+            <!-- USER PROFILE picture -->
+            <img src="soldier.jpg" id="profileImg">
+            <!-- user name -->
+            <p class="name">Erika Parker/Marines</p>
+          </div>
+
+          <div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <!-- USER PROFILE picture -->
+            <img src="dog.jpg" id="badge">
+            <!-- badge being earned-->
+            <p class="badgeName">Veterans Service Dog Medal</p>
+          </div>
+
         </div>
+        <div class="scroller" id="backgroundOpacity">
+          <!-- USER Testimonial TITAL -->
+          <h1 class="title">My story</h1>
+          <!-- USER TESTIMONIAL -->
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metusPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+                    </p>
+        </div>
+          <div class="btn-group btn-group-justified">
+            <a href="#" class="btn btn-primary star">Star</a>
+            <a href="#" class="btn btn-danger flag">Flag</a>
+          </div>
+      </div>
+
+    </div>
+    <!-- TESTIMONIALS -->
+    <div class="container">
+      <div class="jumbotron" id="backgroundOpacity">
+        <div class="row">
+          <div class=" col-lg-4 col-md-6 col-sm-6 col-xs-6">
+            <!-- USER PROFILE picture -->
+            <img src="soldier2.jpg" id="profileImg">
+            <!-- user name -->
+            <p class="name">Laura Esponza/National Guard</p>
+          </div>
+
+          <div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <!-- USER PROFILE picture -->
+            <img src="floatTherapy.jpg" id="badge">
+            <!-- badge being earned-->
+            <p class="badgeName">Float Therapy Medal</p>
+          </div>
+
+        </div>
+
+        <div class="scroller" id="backgroundOpacity">
+          <!-- USER Testimonial TITAL -->
+          <h1 class="title">My story</h1>
+          <!-- USER TESTIMONIAL -->
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metusPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+        </div>
+          <div class="btn-group btn-group-justified">
+            <a href="#" class="btn btn-primary star">Save</a>
+            <a href="#" class="btn btn-danger flag">Flag</a>
+          </div>
+      </div>
+
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+    <div class="blankSpace">
+    </div>
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-text pull-left">
+            <p> 2016 Veterans I.E.D.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- jQuery Plug in-->
+    <script src="jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>

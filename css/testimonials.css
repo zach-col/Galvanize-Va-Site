@@ -1,0 +1,136 @@
+/* spacing out content */
+body{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: none;
+}
+ /* creating background image */
+.full {
+  background: url(https://pixabay.com/static/uploads/photo/2015/03/26/09/47/sky-690293_960_720.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* Changing profile img to be a circle */
+#profileImg{
+  height:150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+#badge{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid blue;
+}
+/* Making testimonial have space between other Testimonial's */
+.jumbotron{
+  margin: 10px 0px;
+}
+
+#backgroundOpacity{
+    background-color:rgba(255,255,255, 1);
+    background:rgba(255,255,255, 0.9);
+}
+/* Making a scroller that only appears when the testimonial is long */
+.scroller{
+  background-color: #CCCCCC;;
+  color: black;
+  height: 500px;
+  width: 100%;
+  overflow: scroll;
+  padding: 3px;
+}
+/* Giving testimonial text padding to fit in container */
+.scroller p{
+  padding-left: 3px;
+  padding-right: 20px;
+}
+/* Giving Testimonial title space to fit in container */
+.scroller h1{
+  padding-left: 3px;
+  padding-right: 20px;
+
+}
+/* header for Post a testimonial */
+#congrats{
+  text-align: center;
+  font-family: cursive;
+  padding-bottom: 20px;
+}
+/* congrats info */
+#congratsInfo{
+  text-align: center;
+  font-family: cursive;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+/* making space for username */
+.name{
+  margin-top: 5px;
+}
+
+.badgeName{
+  margin-top: 5px;
+}
+/* testimonial Title font */
+.title{
+  font-family: bold;
+}
+
+/* adding space above navbar */
+  .blankSpace{
+    width: 100%;
+    height: 60px;
+  }
+/* customizing  danger button */
+.flag {
+    color: #f00;
+    background-color: rgba(255,255,255); /* backup color not transparent */
+    background-color: rgba(255,255,255, 0.8);
+    border-color: #d43f3a;
+}
+.flag:active {
+  color: white;
+  background-color:rgba(255, 72, 72); /* backup color not transparent */
+  background-color: rgba(255, 72, 72, 0.8);
+  border-color: #d43f3a;
+}
+.flag:hover {
+    color: white;
+    background-color: rgba(255, 72, 72); /* backup color not transparent */
+    background-color: rgba(255, 72, 72, 0.8);
+    border-color: #d43f3a;
+}
+
+/* custom primary button */
+.star {
+    color: #00AAE2;
+    background-color:rgba(255, 255, 255); /* backup color not transparent */
+    background-color:rgba(255, 255, 255, 0.8);
+    border-color: #00AAE2;
+}
+.star:active {
+  color: white;
+  background-color: rgba(36, 119, 169); /* backup color not transparent */
+  background-color:rgba(36, 119, 169, 0.8);
+  border-color: #00AAE2;
+}
+.star:hover {
+  color: white;
+  background-color: rgba(36, 119, 169); /* backup color not transparent */
+  background-color:rgba(36, 119, 169, 0.8);
+  border-color: #00AAE2;
+
+}
+/* making scroller work on mobile */
+.modal-body{
+  max-height:none;
+   }
+.modalTitle{
+  font-family: cursive;
+  padding-bottom-bottom: 7px;
+}

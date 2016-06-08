@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Home Page Veterans I.E.D</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom css -->
+    <link href="css/indexLoggedIn.css"rel="stylesheet">
+        <!-- font awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <style>
+          /* Space out content a bit */
+      body {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background: none;
+      }
+
+      .full {
+        background: url("home.jpg") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+    </style>
+  </head>
+  <body id="background">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="indexLoggedIn.html">Veterans Impacting Every Day</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="inspiredBy.html">Inspired By</a></li>
+          </ul>
+        </div><!-- .navbar-collapse -->
+      </div>
+    </div>
+      <!-- Main heading -->
+      <div class="container heading">
+        <div class="jumbotron jumbotronBackground">
+          <h1>VETERANS I.E.D</h1>
+          <p class="lead">A Gamification tool that Empowers Warriors to proactively track their own wellness through self-accountability and positively impacting other Veterans.</p>
+          <div class="alert alert-success signIn">
+            <strong>Welcome Erika Parker</strong>
+          </div>
+                  <div id="about"><button type="button" class="btn-info About" data-toggle="modal"><a href="inspiredBy.html">Inspired By?</a></button></div>
+                  <div id="aboutInfo"></div>
+
+      </div>
+      </div>
+
+
+    <!-- Footer -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-text pull-left">
+            <p> 2016 Veterans I.E.D.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- jQuery Plug in-->
+    <script src="jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+     /* Hide about info on ready */
+      $(document).ready(function(){
+              $("#aboutInfo").hide();
+      });
+          $("#about").click(function(){
+        $("#aboutInfo").show('slow');
+    });
+          
+    </script>
+  </body>
+</html>
+
+
+
